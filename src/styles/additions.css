@@ -1,0 +1,53 @@
+/* Styles authored for this rebuild (not ported from the reference). */
+
+/* Teddy can be petted: paw cursor, a hop and floating hearts. */
+.pup-buddy[data-pet] > svg :is(path, ellipse, circle) {
+  pointer-events: visiblePainted;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .pup-buddy[data-pet] > svg :is(path, ellipse, circle) {
+    cursor:
+      url(/cursor/paw-press.svg) 9 6,
+      pointer;
+  }
+}
+.pup-buddy[data-hop] > svg {
+  animation: pup-hop 0.5s var(--ease-pounce);
+}
+@keyframes pup-hop {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  40% {
+    translate: 0 -12%;
+  }
+}
+.pup-buddy > .pup-heart {
+  animation: pup-heart 1s var(--ease-silk) forwards;
+}
+@keyframes pup-heart {
+  from {
+    opacity: 1;
+    translate: 0 0;
+    scale: 0.6;
+  }
+  to {
+    opacity: 0;
+    translate: var(--dx, 0) -3.5rem;
+    scale: 1.2;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pup-buddy[data-hop] > svg,
+  .pup-buddy > .pup-heart {
+    animation: none;
+  }
+}
+
+/* Small "assignment clone" credit line in the footer. */
+.tp-clone-note {
+  color: color-mix(in srgb, var(--color-milk) 45%, transparent);
+  font-size: 0.75rem;
+}

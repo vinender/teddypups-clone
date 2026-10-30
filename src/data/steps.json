@@ -1,0 +1,34 @@
+{
+  "home": [
+    {
+      "text": "Select your preferred breed or tell us what you're looking for. We'll guide you based on availability and your lifestyle.",
+      "title": "Choose your breed"
+    },
+    {
+      "text": "Our team will share real photos, health details, and all necessary information directly on WhatsApp.",
+      "title": "Get photos & details"
+    },
+    {
+      "text": "Once confirmed, we handle everything professionally and ensure your puppy reaches you safely and stress-free.",
+      "title": "Secure & safe delivery"
+    }
+  ],
+  "howItWorks": [
+    {
+      "text": "Browse our selection of available breeds and place a reservation for the teacup puppy that captures your heart. Our reservation-only model ensures that each puppy is specifically sourced to meet your preferences.",
+      "title": "Reserve your puppy"
+    },
+    {
+      "text": "Once your reservation is confirmed, we will work closely with you to finalize details and provide updates on your puppy's journey.",
+      "title": "Personalized consultation"
+    },
+    {
+      "text": "We manage all aspects of the import process, including health checks, travel arrangements, and necessary documentation. Your puppy will be carefully transported and will arrive ready to join your family.",
+      "title": "Import and arrival"
+    },
+    {
+      "text": "Upon arrival, we provide support to help your new puppy acclimate to their new environment. Our team is available for any additional assistance and to ensure a smooth transition into your home.",
+      "title": "Welcome home"
+    }
+  ]
+}
