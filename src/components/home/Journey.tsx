@@ -77,7 +77,15 @@ export function Journey() {
                     <div className="tp-snaps">
                       {showroomPhotos.map((s) => (
                         <span key={s.src} className="tp-snaps__one">
-                          <Image src={s.src} alt={s.alt} fill sizes="7rem" style={{ objectFit: "cover" }} />
+                          {/* Eager: the phone screen clips its overflow, so lazy loading never sees these. */}
+                          <Image
+                            src={s.src}
+                            alt={s.alt}
+                            fill
+                            sizes="7rem"
+                            loading="eager"
+                            style={{ objectFit: "cover" }}
+                          />
                         </span>
                       ))}
                     </div>
