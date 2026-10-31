@@ -8,10 +8,12 @@ type PhotoProps = {
   priority?: boolean;
   className?: string;
   quality?: number;
+  /** "eager" for photos lazy loading can't see: in sideways strips or behind clip-path reveals. */
+  loading?: "eager" | "lazy";
 };
 
 /** A cover-cropped photo that honours the media's focal point and blur placeholder. */
-export function Photo({ media, alt = media.alt, sizes, priority, className, quality }: PhotoProps) {
+export function Photo({ media, alt = media.alt, sizes, priority, className, quality, loading }: PhotoProps) {
   const pos = `${(media.focalX * 100).toFixed(1)}% ${(media.focalY * 100).toFixed(1)}%`;
   return (
     <Image
@@ -21,6 +23,7 @@ export function Photo({ media, alt = media.alt, sizes, priority, className, qual
       sizes={sizes}
       priority={priority}
       quality={quality}
+      loading={priority ? undefined : loading}
       className={className}
       placeholder={media.blurDataUrl ? "blur" : "empty"}
       blurDataURL={media.blurDataUrl ?? undefined}

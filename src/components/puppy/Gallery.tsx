@@ -80,7 +80,7 @@ export function Gallery({ name, media }: { name: string; media: Media[] }) {
                     : "border-cocoa/30 hover:-rotate-2 hover:border-cocoa"
                 }`}
               >
-                <Photo media={still(m)} alt="" sizes="6rem" />
+                <Photo media={still(m)} alt="" sizes="6rem" loading="eager" />
                 {m.kind === "video" && (
                   <span className="absolute inset-0 grid place-items-center bg-cocoa/30 text-lg text-milk">▶</span>
                 )}

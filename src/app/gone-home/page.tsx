@@ -53,7 +53,7 @@ export default function GoneHomePage() {
                   <Link className="tp-ticket__link" href={`/puppies/${p.slug}`}>
                     <span className="tp-ticket__main">
                       <span className="tp-ticket__photo">
-                        <Photo media={p.cover} sizes="(min-width: 768px) 12rem, 35vw" />
+                        <Photo media={p.cover} sizes="(min-width: 768px) 12rem, 35vw" loading="eager" />
                       </span>
                       <span className="tp-ticket__body">
                         <span className="font-scrawl tp-ticket__kicker">one ticket home</span>
